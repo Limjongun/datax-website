@@ -1,0 +1,174 @@
+IDE WEBSITE: AI DATA ANALYST WORKSPACE
+
+KONSEP Gabungan Power BI, notebook analisis data, AutoML, dan AI
+Business Analyst dalam satu platform.
+
+FITUR UTAMA
+
+A. DATA SHEET (POWER BI-LIKE) - Upload CSV, Excel, Google Sheets -
+Editable grid seperti Excel - Auto column type detection - Filter, sort,
+grouping - Pivot ringan
+
+B. INSTANT DATA PROCESSING ENGINE 1. Data Profiling (EDA Otomatis) -
+Missing value summary - Unique value count - Distribution preview -
+Correlation analysis - Data quality score
+
+2.  Feature Engineering
+
+-   One-hot encoding
+-   Label encoding
+-   Scaling (MinMax, StandardScaler)
+-   Date feature extraction
+-   Feature generation
+
+3.  Outlier Detection
+
+-   IQR
+-   Z-Score
+-   Isolation Forest
+-   Visual highlight
+
+4.  NaN Handling (User Controlled)
+
+-   Drop row
+-   Drop column
+-   Fill mean
+-   Fill median
+-   Fill mode
+-   Custom value
+-   AI recommendation
+
+C. VISUALIZATION ENGINE - Bar Chart - Line Chart - Pie Chart - Scatter
+Plot - Heatmap - Histogram - Boxplot - Dashboard Builder - Drag and Drop
+Chart Builder
+
+D. AI REASONING ANALYST - Analisis penyebab perubahan KPI - Analisis
+tren - Analisis korelasi - Root cause analysis - Natural language
+analytics - Executive summary otomatis
+
+Contoh: “Kenapa penjualan turun bulan Mei?”
+
+AI menghasilkan: - Penjelasan - Faktor utama - Risiko - Rekomendasi
+
+E. BUSINESS INSIGHT ENGINE - KPI Monitoring - Growth Analysis - Customer
+Segmentation - Product Performance - Opportunity Detection - Risk
+Detection - Revenue Analysis - Forecasting Insight
+
+F. TRAINING CAMP 1. SQL Learning - Basic SQL - Advanced SQL - JOIN -
+GROUP BY - Window Function - CTE - Stored Procedure
+
+2.  Practice Lab
+
+-   Real Dataset
+-   Query Challenge
+-   Auto Grading
+-   Leaderboard
+
+3.  AI Tutor
+
+-   SQL Assistant
+-   Query Explanation
+-   Query Optimization
+
+FITUR WOW / DIFFERENTIATOR
+
+1.  Auto Insight Generator Output:
+
+-   5 Insight Penting
+-   3 Masalah Data
+-   2 Rekomendasi Bisnis
+
+2.  Smart Data Cleaning Assistant AI memberikan rekomendasi pembersihan
+    data.
+
+3.  Natural Language Query Contoh: “Tampilkan penjualan tertinggi tiap
+    bulan”
+
+AI mengubah menjadi: - SQL Query - Pandas Code
+
+4.  Auto Dashboard Builder Upload data → Dashboard otomatis.
+
+5.  AI Report Generator Ekspor PDF otomatis berisi:
+
+-   Insight
+-   Grafik
+-   Kesimpulan
+-   Rekomendasi
+
+TECH STACK MODERN DAN MUDAH
+
+FRONTEND - Next.js - React - TypeScript - Tailwind CSS - ShadCN UI
+
+DATA GRID - AG Grid dan hyperformula
+
+Frontend Data sheet 
+---------
+AG Grid
+
+CSV
+---------
+PapaParse
+
+Excel
+---------
+SheetJS
+
+Backend
+---------
+FastAPI
+
+Data Processing
+---------
+Polars
+Pandas
+
+
+VISUALIZATION - Apache ECharts - Plotly.js - Recharts
+
+BACKEND - FastAPI
+
+DATA PROCESSING - Pandas - NumPy - SciPy - Scikit-Learn - Missingno
+
+AI LAYER - OpenAI API
+
+DATABASE - PostgreSQL - Redis
+
+STORAGE -  Cloudflare R2
+
+AUTHENTICATION - NextAuth - Google OAuth
+
+DEPLOYMENT Frontend: - Vercel
+
+Backend: - Railway - Render - VPS
+
+Database: - Supabase PostgreSQL atau - Neon PostgreSQL
+
+ARSITEKTUR
+
+Frontend (Next.js) ↓ API Layer (FastAPI) ↓ Data Engine (Pandas +
+Scikit-Learn) ↓ AI Engine (LLM) ↓ PostgreSQL + Redis
+
+ROADMAP
+
+MVP 1 - Upload CSV - Data Profiling - EDA - Visualization - NaN Handling
+
+MVP 2 - Feature Engineering - AI Insight - Dashboard Builder
+
+MVP 3 - SQL Training Camp - Business Analyst AI - Forecasting - PDF
+Report
+
+NAMA PRODUK
+
+-   DataLens AI
+-   InsightFlow
+-   AnalystX
+-   SmartBI AI
+-   InsightForge
+-   DataPilot AI
+
+VISI JANGKA PANJANG
+
+Menjadi platform AI Data Analyst yang mampu: - Membersihkan data -
+Menganalisis data - Membuat visualisasi - Menjawab pertanyaan bisnis -
+Menghasilkan insight - Melatih pengguna SQL dan Data Analytics dalam
+satu ekosistem terpadu.

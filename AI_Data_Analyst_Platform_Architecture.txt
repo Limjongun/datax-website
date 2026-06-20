@@ -1,0 +1,421 @@
+
+AI DATA ANALYST PLATFORM - PROFESSIONAL ARCHITECTURE
+
+====================================================
+1. OPTIMAL TECH STACK (2026)
+====================================================
+
+FRONTEND
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- ShadCN UI
+- AG Grid Enterprise
+- Apache ECharts
+- TanStack Query
+- Zustand
+- React Hook Form
+- Zod
+
+FILE IMPORT
+- PapaParse (CSV)
+- SheetJS (Excel)
+
+AUTHENTICATION
+- NextAuth
+- Google OAuth
+- GitHub OAuth
+- JWT
+
+BACKEND
+- FastAPI
+- Python 3.13
+
+DATA PROCESSING
+- Polars
+- Pandas
+- NumPy
+- SciPy
+- Scikit-Learn
+- Feature Engine
+- PyOD
+
+AI ENGINE
+- OpenAI
+- Ollama
+- LangGraph
+- LangChain
+- LlamaIndex
+
+DATABASE
+- PostgreSQL
+- Redis
+
+STORAGE
+- Cloudflare R2
+
+BACKGROUND JOB
+- Celery
+- Redis Queue
+
+REPORTING
+- WeasyPrint
+- ReportLab
+
+DEPLOYMENT
+Frontend : Vercel
+Backend : Railway / VPS
+Database : Supabase PostgreSQL
+Storage : Cloudflare R2
+
+====================================================
+2. SYSTEM ARCHITECTURE
+====================================================
+
+Client
+   |
+Next.js
+   |
+API Gateway
+   |
+FastAPI
+   |
+------------------------------------------------
+| Data Engine | AI Engine | Report Engine |
+------------------------------------------------
+   |
+PostgreSQL
+Redis
+Cloudflare R2
+
+====================================================
+3. PROFESSIONAL MONOREPO STRUCTURE
+====================================================
+
+ai-analyst-platform/
+
+├── apps/
+│   ├── web/
+│   └── api/
+│
+├── packages/
+│   ├── ui/
+│   ├── charts/
+│   ├── grid/
+│   ├── auth/
+│   ├── shared/
+│   └── types/
+│
+├── infrastructure/
+│   ├── docker/
+│   ├── nginx/
+│   └── scripts/
+│
+├── docs/
+│
+└── README.md
+
+====================================================
+4. FRONTEND STRUCTURE
+====================================================
+
+apps/web/
+
+src/
+
+├── app/
+│
+├── components/
+│   ├── grid/
+│   ├── charts/
+│   ├── dashboard/
+│   ├── forms/
+│   ├── ai/
+│   └── reports/
+│
+├── features/
+│   ├── datasets/
+│   ├── profiling/
+│   ├── cleaning/
+│   ├── feature-engineering/
+│   ├── visualization/
+│   ├── sql-lab/
+│   ├── ai-insights/
+│   └── reports/
+│
+├── hooks/
+├── lib/
+├── store/
+├── services/
+├── types/
+└── utils/
+
+====================================================
+5. BACKEND STRUCTURE
+====================================================
+
+apps/api/
+
+app/
+
+├── api/
+│   ├── auth/
+│   ├── datasets/
+│   ├── profiling/
+│   ├── cleaning/
+│   ├── feature_engineering/
+│   ├── visualization/
+│   ├── sql_lab/
+│   ├── ai/
+│   └── reports/
+│
+├── core/
+│
+├── database/
+│
+├── services/
+│   ├── ai/
+│   ├── profiling/
+│   ├── cleaning/
+│   ├── feature_engineering/
+│   ├── visualization/
+│   └── reports/
+│
+├── workers/
+│
+├── models/
+│
+├── schemas/
+│
+└── utils/
+
+====================================================
+6. MAIN WEB PAGES
+====================================================
+
+PUBLIC
+
+/
+/features
+/pricing
+/blog
+/about
+/contact
+/login
+/register
+
+====================================================
+7. USER DASHBOARD
+====================================================
+
+/dashboard
+
+Dashboard Overview
+Recent Projects
+Recent Datasets
+AI Summary
+
+====================================================
+8. DATASET MODULE
+====================================================
+
+/datasets
+
+Features:
+
+- Upload CSV
+- Upload XLSX
+- Upload JSON
+- Upload Parquet
+- Dataset Versioning
+- Dataset Metadata
+- Dataset Search
+
+Pages:
+
+/datasets
+/datasets/upload
+/datasets/{id}
+/datasets/{id}/preview
+/datasets/{id}/history
+
+====================================================
+9. DATA SHEET MODULE
+====================================================
+
+/sheet
+
+AG Grid Spreadsheet
+
+Features:
+
+- Edit Cell
+- Filter
+- Sort
+- Freeze Column
+- Formula
+- Copy Paste
+- Fill Down
+- Export
+
+====================================================
+10. DATA PROFILING MODULE
+====================================================
+
+/profiling
+
+Features:
+
+- Data Summary
+- Missing Values
+- Data Types
+- Correlation Matrix
+- Distribution Analysis
+- Duplicate Analysis
+- Quality Score
+
+====================================================
+11. DATA CLEANING MODULE
+====================================================
+
+/cleaning
+
+Features:
+
+- Missing Value Handling
+- Outlier Detection
+- Duplicate Removal
+- Type Conversion
+- Data Validation
+
+====================================================
+12. FEATURE ENGINEERING MODULE
+====================================================
+
+/feature-engineering
+
+Features:
+
+- Encoding
+- Scaling
+- Feature Selection
+- Feature Generation
+- Datetime Transformation
+
+====================================================
+13. VISUALIZATION MODULE
+====================================================
+
+/visualization
+
+Features:
+
+- Dashboard Builder
+- Drag Drop Chart
+- KPI Card
+- Heatmap
+- Scatter Plot
+- Box Plot
+- Histogram
+
+====================================================
+14. SQL TRAINING CAMP
+====================================================
+
+/sql-camp
+
+Features:
+
+- SQL Playground
+- Interactive Lessons
+- Query Challenge
+- Leaderboard
+- AI SQL Tutor
+
+Pages:
+
+/sql-camp
+/sql-camp/lesson
+/sql-camp/practice
+/sql-camp/challenge
+
+====================================================
+15. AI ANALYST MODULE
+====================================================
+
+/ai-analyst
+
+Features:
+
+- Chat With Data
+- Business Insight
+- Root Cause Analysis
+- KPI Explanation
+- Forecast Suggestion
+- Executive Summary
+
+====================================================
+16. REPORTING MODULE
+====================================================
+
+/reports
+
+Features:
+
+- PDF Report
+- PPT Report
+- Excel Report
+- Scheduled Report
+
+====================================================
+17. ADMIN PANEL
+====================================================
+
+/admin
+
+Features:
+
+- User Management
+- Dataset Monitoring
+- AI Usage Monitoring
+- Billing
+- Audit Logs
+
+====================================================
+18. FUTURE ENTERPRISE FEATURES
+====================================================
+
+- AutoML
+- Forecasting
+- Time Series Analysis
+- Data Warehouse Connector
+- Power BI Connector
+- Tableau Connector
+- Team Collaboration
+- Notebook Environment
+- Python Sandbox
+- R Integration
+- MCP Integration
+- AI Agent Analyst
+
+====================================================
+FINAL RECOMMENDATION
+====================================================
+
+Next.js
+AG Grid + hyperformula
+PapaParse
+SheetJS
+FastAPI
+Polars
+Pandas
+PostgreSQL
+Redis
+Cloudflare R2
+OpenAI/Ollama
+Apache ECharts
+
+Target:
+Power BI + Excel + ChatGPT + DataCamp
+dalam satu platform.

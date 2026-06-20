@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  email     String     @unique
+  password  String
+  name      String?
+  datasets  Dataset[]
+  reports   Report[]
+  schedules Schedule[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Dataset {
+  id           String     @id @default(uuid())
+  name         String
+  filePath     String
+  rowCount     Int
+  columnCount  Int
+  fileSize     Int
+  userId       String
+  user         User       @relation(fields: [userId], references: [id])
+  schedules    Schedule[]
+  createdAt    DateTime   @default(now())
+}
+
+model Report {
+  id          String   @id @default(uuid())
+  title       String
+  content     String   // SQLite does not support Json, using String to store stringified JSON
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Schedule {
+  id          String   @id @default(uuid())
+  type        String   // e.g., 'Data Cleaning', 'AI Profiling', 'EDA Report'
+  status      String   @default("pending") // 'pending', 'done'
+  scheduledAt DateTime
+  
+  datasetId   String
+  dataset     Dataset  @relation(fields: [datasetId], references: [id], onDelete: Cascade)
+  
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
