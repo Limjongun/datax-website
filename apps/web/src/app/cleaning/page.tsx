@@ -80,7 +80,7 @@ export default function CleaningPage() {
     try {
       const payload = { ... (filePath ? { file_path: filePath } : { data: rowData }), config, save_to_disk: !previewOnly };
       
-      const response = await fetch('http://localhost:8000/api/clean', {
+      const response = await fetch('http://localhost:8001/api/clean', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

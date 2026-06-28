@@ -25,7 +25,7 @@ export default function AiAnalystWidget({ totalDatasets, totalRowsFormatted }: {
     try {
       // 1. Run profile
       const payload = filePath ? { file_path: filePath } : { data: rowData };
-      const profileRes = await fetch('http://localhost:8000/api/profile', {
+      const profileRes = await fetch('http://localhost:8001/api/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -35,7 +35,7 @@ export default function AiAnalystWidget({ totalDatasets, totalRowsFormatted }: {
       const profileData = await profileRes.json();
       
       // 2. Run AI generation
-      const aiRes = await fetch('http://localhost:8000/api/ai/generate-report', {
+      const aiRes = await fetch('http://localhost:8001/api/ai/generate-report', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

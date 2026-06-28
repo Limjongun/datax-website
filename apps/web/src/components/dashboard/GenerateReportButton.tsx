@@ -38,7 +38,7 @@ export default function GenerateReportButton({ datasets }: Props) {
 
     try {
       // 1. Get stats by profiling the file path
-      const profileRes = await fetch('http://localhost:8000/api/profile', {
+      const profileRes = await fetch('http://localhost:8001/api/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ file_path: dataset.filePath })
@@ -50,7 +50,7 @@ export default function GenerateReportButton({ datasets }: Props) {
       }
 
       // 2. Generate report text from AI
-      const aiRes = await fetch('http://localhost:8000/api/ai/generate-report', {
+      const aiRes = await fetch('http://localhost:8001/api/ai/generate-report', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

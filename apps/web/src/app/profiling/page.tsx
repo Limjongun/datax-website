@@ -46,7 +46,7 @@ export default function ProfilingPage() {
 
       const payload = filePath ? { file_path: filePath } : { data: rowData };
 
-      const response = await fetch('http://localhost:8000/api/profile', {
+      const response = await fetch('http://localhost:8001/api/profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ export default function ProfilingPage() {
         setProfilingError("Request timed out. The dataset may be too large or the backend is unresponsive.");
       } else if (err.message === 'Failed to fetch' || err.name === 'TypeError') {
         setProfilingError(
-          "Cannot connect to the Python backend (http://localhost:8000). Please ensure the FastAPI server is running: cd apps/api && npm run dev"
+          "Cannot connect to the Python backend (http://localhost:8001). Please ensure the FastAPI server is running: cd apps/api && npm run dev"
         );
       } else {
         setProfilingError(err.message || "An unexpected error occurred during profiling.");

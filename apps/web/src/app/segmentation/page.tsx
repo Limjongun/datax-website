@@ -26,7 +26,7 @@ export default function SegmentationPage() {
   const runAnalysis = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/stats/segmentation', {
+      const res = await fetch('http://localhost:8001/api/stats/segmentation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

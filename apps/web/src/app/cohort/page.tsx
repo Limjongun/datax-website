@@ -25,7 +25,7 @@ export default function CohortPage() {
   const runAnalysis = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/stats/cohort', {
+      const res = await fetch('http://localhost:8001/api/stats/cohort', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

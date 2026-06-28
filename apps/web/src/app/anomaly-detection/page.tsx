@@ -30,7 +30,7 @@ export default function AnomalyDetectionPage() {
   const runAnalysis = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/stats/anomaly', {
+      const res = await fetch('http://localhost:8001/api/stats/anomaly', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -122,7 +122,7 @@ export default function FeatureEngineeringPage() {
     try {
       const payload = { ... (filePath ? { file_path: filePath } : { data: rowData }), config, save_to_disk: !previewOnly };
 
-      const response = await fetch('http://localhost:8000/api/feature-engineering', {
+      const response = await fetch('http://localhost:8001/api/feature-engineering', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

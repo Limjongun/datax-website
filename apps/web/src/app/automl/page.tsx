@@ -78,7 +78,7 @@ export default function AutoMLPage() {
     setPredictionInputs({});
 
     try {
-      const response = await fetch("http://localhost:8000/api/automl/regression", {
+      const response = await fetch("http://localhost:8001/api/automl/regression", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -114,7 +114,7 @@ export default function AutoMLPage() {
         numericInputs[key] = parseFloat(predictionInputs[key]) || 0;
       }
 
-      const response = await fetch("http://localhost:8000/api/automl/predict", {
+      const response = await fetch("http://localhost:8001/api/automl/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

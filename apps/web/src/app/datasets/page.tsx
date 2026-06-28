@@ -43,7 +43,7 @@ export default function DatasetsPage() {
       formData.append("file", file);
       formData.append("user_id", session.user.id as string);
 
-      const fastApiResponse = await fetch("http://localhost:8000/api/upload", {
+      const fastApiResponse = await fetch("http://localhost:8001/api/upload", {
         method: "POST",
         body: formData,
       });
@@ -187,7 +187,7 @@ export default function DatasetsPage() {
                     // Fetch preview data for the existing dataset to populate the store
                     try {
                       setIsLoading(true);
-                      const res = await fetch("http://localhost:8000/api/profile", {
+                      const res = await fetch("http://localhost:8001/api/profile", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ file_path: item.filePath })

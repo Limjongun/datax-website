@@ -26,7 +26,7 @@ export default function WhatIfPage() {
   const runAnalysis = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/stats/what-if', {
+      const res = await fetch('http://localhost:8001/api/stats/what-if', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
